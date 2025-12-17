@@ -4,6 +4,7 @@ BCA 2023-27 Internship Project - OTT PLATFORM
 
 Backend for an OTT streaming platform built with Node.js, Express, and MongoDB.
 
+
 ## Tech Stack
 
 - Node.js & Express.js
@@ -25,7 +26,7 @@ Backend for an OTT streaming platform built with Node.js, Express, and MongoDB.
    ```env
    PORT=8000
    MONGODB_URI=your_mongodb_uri
-   CORS_ORIGIN=*
+   JWT_SECRET=your_secret
    CLOUDINARY_CLOUD_NAME=your_cloud_name
    CLOUDINARY_API_KEY=your_api_key
    CLOUDINARY_API_SECRET=your_api_secret
@@ -33,27 +34,26 @@ Backend for an OTT streaming platform built with Node.js, Express, and MongoDB.
 
 3. **Run the application**
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## API Endpoints
 
 ### Users
 
-- `POST /api/v1/users/register` - Register user
+- `POST /api/v1/users/register` - Register user (with avatar & coverImage)
 - `POST /api/v1/users/login` - Login user
-- `POST /api/v1/users/logout` - Logout user
-- `GET /api/v1/users/profile` - Get profile
-- `PATCH /api/v1/users/update` - Update profile
-- `PATCH /api/v1/users/avatar` - Update avatar
+- `POST /api/v1/users/logout` - Logout user (protected)
+- `GET /api/v1/users/:id` - Get user profile
 
 ### Videos
 
-- `POST /api/v1/videos/upload` - Upload video
+- `POST /api/v1/videos` - Upload video (protected)
 - `GET /api/v1/videos` - Get all videos
-- `GET /api/v1/videos/:id` - Get video by ID
-- `PATCH /api/v1/videos/:id` - Update video
-- `DELETE /api/v1/videos/:id` - Delete video
+- `GET /api/v1/videos/search` - Search videos
+- `GET /api/v1/videos/user-videos` - Get current user's videos (protected)
+- `GET /api/v1/videos/:videoId` - Get video by ID
+- `DELETE /api/v1/videos/:videoId` - Delete video (protected)
 
 ## Authentication
 
@@ -62,3 +62,4 @@ Protected routes require JWT token in the Authorization header:
 ```
 Authorization: Bearer <your_token>
 ```
+
