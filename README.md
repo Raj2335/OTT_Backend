@@ -26,10 +26,6 @@ Backend for an OTT streaming platform built with Node.js, Express, and MongoDB.
    PORT=8000
    MONGODB_URI=your_mongodb_uri
    CORS_ORIGIN=*
-   ACCESS_TOKEN_SECRET=your_secret
-   ACCESS_TOKEN_EXPIRY=1d
-   REFRESH_TOKEN_SECRET=your_secret
-   REFRESH_TOKEN_EXPIRY=10d
    CLOUDINARY_CLOUD_NAME=your_cloud_name
    CLOUDINARY_API_KEY=your_api_key
    CLOUDINARY_API_SECRET=your_api_secret
