@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r dotenv/config index.js",
-    "build": "npm install && npm rebuild bcrypt --build-from-source",
+    "build": "npm ci",
     "dev": "nodemon -r dotenv/config --experimental-json-modules index.js"
   },
   "keywords": [
