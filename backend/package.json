@@ -5,9 +5,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config src/index.js",
+    "start": "node -r dotenv/config index.js",
     "build": "echo 'Build complete - No build step required for this project'",
-     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+     "dev": "nodemon -r dotenv/config --experimental-json-modules index.js"
 
 
   },
