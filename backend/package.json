@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config src/index.js"
+    "start": "node -r dotenv/config src/index.js",
+    "build": "echo 'Build complete - No build step required for this project'"
   },
   "keywords": [
     "backend",
