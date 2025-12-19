@@ -6,10 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node -r dotenv/config index.js",
-    "build": "echo 'Build complete - No build step required for this project'",
-     "dev": "nodemon -r dotenv/config --experimental-json-modules index.js"
-
-
+    "build": "npm install && npm rebuild bcrypt --build-from-source",
+    "dev": "nodemon -r dotenv/config --experimental-json-modules index.js"
   },
   "keywords": [
     "backend",
