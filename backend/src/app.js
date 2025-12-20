@@ -13,7 +13,12 @@ const limiter = rateLimit({
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:3000"],
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://ott-frontend-dmvg-raj2335s-projects.vercel.app",
+      "https://ott-frontend-dmvg.vercel.app", // Add this in case Vercel uses a different domain
+    ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],

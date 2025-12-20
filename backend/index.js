@@ -6,10 +6,7 @@ import cors from "cors";
 dotenv.config({
   path: "./.env"
 });
-
-app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:3000",
-}));
+console.log("FRONTEND URL IS ", process.env.FRONTEND_URL);
 
 connectDB()
   .then(() => {
