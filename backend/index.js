@@ -1,15 +1,15 @@
 import dotenv from "dotenv";
 import connectDB from "./src/db/index.js";
 import { app } from "./src/app.js";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import cors from "cors";
 
 dotenv.config({
   path: "./.env"
 });
+
+app.use(cors({
+  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+}));
 
 connectDB()
   .then(() => {
